@@ -1,0 +1,27 @@
+#Alternate for list
+pip install nltk
+import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+import nltk
+from nltk.tokenize import word_tokenize
+# Ensure NLTK's tokenizer is downloaded
+nltk.download('punkt')
+a = "Hi how are you"
+tokens = word_tokenize(a)
+print(tokens)
+
+
+#word for word in punk
+
+import nltk
+from nltk.tokenize import word_tokenize
+text = "hi I am balamurugan"
+filter = ("hi", "i", "am","I")
+tokens = word_tokenize(text)
+filtered_tokens = [token for token in tokens if token not in filter]
+filtered_text = ' '.join(filtered_tokens)
+print(filtered_text)

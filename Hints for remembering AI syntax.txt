@@ -1,0 +1,1069 @@
+How to give space between 2 lines?
+print(A)
+print("")#space
+print(B)
+
+How to give line between 2 lines?
+print(A)
+print("---")#space
+print(B)
+
+How to give new line and print in same time?
+A=10
+B=5
+C= 8
+E="Jan2023"
+print(A)
+print("\nE=",E)#space
+
+How to addition, subtraction, division, multiplication and power
+a=10
+b=20
+c=a-b
+d=a+b
+e=a/b
+f=a*b
+g=a**b#a power b
+print(g)
+
+
+How to get input from user for int, float and string
+a = int(input("Enter a integer = "));
+b = float(input("Enter a decimal value ="));
+c = input("Enter a string = ");
+print(a)
+print(b)
+print(c)
+
+How to get input from user and perform mathematic operation
+a = int(input("Enter a integer  "));
+b = float(input("Enter a decimal value "));
+c = input("Enter a string  ");
+d=a+b
+print("sum=",d)
+
+
+How to perform less than and less than or equal to
+o=a<b
+m=a<=b
+
+
+How to perform greater than and greater than or equal to
+n=a>b
+g=a>=b
+
+How to compare 2 numbers
+j=a==b
+
+How to perform !equal
+j1=a!=b
+
+How to initialize array in num py
+arr = np.array(["a", "b", "c", "d", "e"])
+print(arr)
+
+
+How to add 2 arrays
+a = np.array([1,2,3,4,5,6])
+b = np.array([2,1,1,1,12,9])
+c = a+b;
+
+
+How to slice a value from array and perform arithmetic operation
+arr = np.array([1, 2, 3, 4])
+c=arr[0]
+d=arr[1]
+e=arr[2]
+f=d+e
+
+
+How to get data from array in reverse order
+arr = np.array([1, 2, 3, 4])
+d=arr[-2]
+e=arr[-3]
+f1=arr[-1]
+print(d)
+print(e)
+print(f1)
+
+
+How to slice particular range of data from array
+arr = np.array([0,1, 2, 3, 4, 5, 6, 7])
+x=arr[2:4]
+print(x)
+y=arr[4:]
+print(y)
+z=arr[:4]
+print(z)
+
+
+How to find the size of array
+b = np.array([1, 2, 3, 4, 5])
+x=b.size
+
+
+How to form an array from an array
+arr = np.array([0,1, 2, 3, 4])
+a=(arr[0])
+b=(arr[1])
+c=(arr[2])
+d=(arr[3])
+e=(arr[4])
+x=np.array([e,a, c, b, b])
+y=np.array([a,a, a, a, a])
+z=np.array([b,a, b, d, a])
+print(x)
+print(y)
+print(z)
+
+
+How to reverse the array
+x = np.array([12, 38,65,87,67])
+ra= np.flip(x)
+print(ra)
+
+
+How to sort the array
+arr = np.array([0, 12, 1, 3, 4, 5, 6])
+print("Original array:")
+print(arr)
+arr1 = np.sort(arr)
+print(arr1)
+ra= np.flip(arr1)
+print(ra)
+
+
+How to find the minimum and maximum value from an array
+arr = np.array([0, 12, 1, 3, 4, 5, 6])
+min=np.min([arr])
+max=np.max([arr])
+print(min)
+print(max)
+
+
+How to find the sum and mean of the array
+arr = np.array([1, 2, 3, 5, 9])
+sum=np.sum([arr])
+mean=np.mean([arr])
+print(sum)
+print(mean)
+
+
+How to concatenate or join 2 array
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+arr = np.concatenate((arr1, arr2))
+
+
+How to find the index of particular value from array
+arr = np.array([1, 2, 3, 4, 5, 4, 4])
+x = np.where(arr == 4)
+print(x)
+
+
+How to remove - or + symbol from any number of array
+arr = np.array([-1, -2, 1, 2, +3, -4])
+newarr = np.absolute(arr)#polarity will be removed
+
+
+How to find some percentage of one value and adding the some percentage to original value
+a = np.array([1,2,3,4,5,6])
+x=a*10/100
+print(x)
+x1=a+x
+print(x1)
+
+
+How to display data in proper format using panda
+
+import pandas as pd
+import numpy as np
+a=np.array([11,99,303,44,55,6])
+b=np.array([1,2,3,4,5,6])
+c=a+b
+d=np.array(["Abi","Bala","Coulins","Dinesh","Elger","Ganesh"])
+frame={"Name":d, "A":a, "B":b, "C":c}
+g=pd.DataFrame(frame)
+print(g)
+g.to_excel('output1.xlsx', index=False)
+g.to_csv('file1.csv', index=False)
+
+
+
+How to read data from excel sheet and csv file
+df = pd.read_excel("mark.xlsx")
+#df = pd.read_csv("mark.csv")
+print(df)
+
+
+
+How to get number of data present and number of rows and columns
+size=df.size
+print("Size",size)
+shape=df.shape
+print("Shape",shape)
+
+
+How to segregate set of columns alone from the part of table present in excel sheet
+df = pd.read_excel("mark.xlsx")
+col = df[["Name","Eng","Bio","Tamil"]]
+print(col)
+col.to_excel('output3.xlsx', index=False)
+
+
+
+How to get particular set of row of data from the part of table present in excel sheet
+import pandas as pd
+df = pd.read_excel("mark.xlsx")
+location =df.loc[[0, 1]]
+print(location)
+location1 =df.loc[[4, 5,13,14]]
+print(location1)
+
+
+How to particular set of row of data from the part of table present in excel sheet
+Below one gives set of data from starting till the row number we specified
+import pandas as pd
+df = pd.read_excel("mark.xlsx")
+selected_rows1 = df.iloc[:4]
+print(selected_rows1)
+
+
+How to particular set of row of data from the part of table present in excel sheet
+Below one gives set of data from row number we specified to till end
+import pandas as pd
+df = pd.read_excel("mark.xlsx")
+selected_rows2 = df.iloc[10:]
+print(selected_rows2)
+
+
+How to get specified set of row of data from top number of rows we required from below number of row we require
+without passing parameter default value 5 would be taken as parameter
+import pandas as pd
+df = pd.read_excel("mark.xlsx")
+h=df.head(1)
+t=df.tail(1)
+print(h)
+print(t)
+
+
+How to sort in ascending order on set of row of data from the part of table for the specified column field
+Note: That specific column will change all corresponding value when specified in ascending order
+import pandas as pd
+df = pd.read_excel("mark.xlsx")
+sort=df.sort_values(by=["Math"])
+print(sort)
+
+
+
+How to sort in descending order on set of row of data from the part of table for the specified column field
+Note: That specific column will change all corresponding value when specified in descending order
+import pandas as pd
+df = pd.read_excel("mark.xlsx")
+dsort=df.sort_values(by='Math', ascending=False)
+print(dsort)
+
+
+How to find maximum value in each column on data wise
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+df1 = df[["Bio","Phy","Math","Tamil","Eng"]]
+ma=df1.max()
+print(ma)
+Bio      91
+Phy      91
+Math     91
+Tamil    80
+Eng      80
+
+
+How to find the sum of all values in particular column
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+df1 = df[["Bio","Phy","Math","Tamil","Eng"]]
+s=df1.sum()
+print(s)
+
+
+How to find the mean of all values in particular column
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+df1 = df[["Bio","Phy","Math","Tamil","Eng"]]
+m=df1.mean()
+print(m)
+
+
+How to find the round of all value in column wise and row wise from excel sheet
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+c=df.round(0)
+print(c)
+
+How to read the data from excel sheet from local of system
+import pandas as pd
+# Specify the full path to the Excel file
+file_path = r"D:\Data and task\Data\panda\mark.xlsx"
+df = pd.read_excel(file_path)
+print(df)
+
+
+#read csv
+import pandas as pd
+file_path = r"D:\Data and task\Data\panda\mark.csv"
+df = pd.read_csv(file_path)
+print(df)
+
+
+
+#How to read data from excel and csv in system local file, and write the file to excel and csv
+import pandas as pd
+import numpy as np
+# Create numpy arrays
+a = np.array([11, 99, 303, 44, 55, 6])
+b = np.array([1, 2, 3, 4, 5, 6])
+c = a + b
+d = np.array(["Abi", "Bala", "Coulins", "Dinesh", "Elger", "Ganesh"])
+# Create a DataFrame
+frame = {"Name": d, "A": a, "B": b, "C": c}
+g = pd.DataFrame(frame)
+# Display the DataFrame
+print(g)
+# Specify the file paths
+excel_file_path = r'D:\Data and task\Data\panda\output1.xlsx'
+csv_file_path = r'D:\Data and task\Data\panda\file1.csv'
+# Write the DataFrame to Excel and CSV files
+g.to_excel(excel_file_path, index=False)
+g.to_csv(csv_file_path, index=False)
+print("Files saved successfully.")
+
+
+How to rename column of data extracted from the excel sheet
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+df.rename(columns={'Math': 'M','Phy':'P'}, inplace=True)
+h=df.head(1)
+print(h)
+
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+df.rename(columns={'Math': 'M'}, inplace=True)
+h=df.head(1)
+print(h)
+
+
+How to query and get data from set of data set,
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+q1=df.query('Math > 90')
+print(" Math > 90\n",q1)
+
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+q2=df.query('Math > 90 and Phy >90')
+print(q2)
+
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+q3=df.query('Math > 90 and Phy >90 and Eng >90')
+print(q3)
+
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+q4=df.query('Math > 90 and Phy >90 and Eng >90 and Che>90')
+print(q4)
+
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+q5=df.query('Math == 90 or Phy ==90 or Eng ==90 or Che==90')
+print(q5)
+
+
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+q5=df.query('Math == 91')
+print(q5)
+
+
+
+How to convert data frame to panda,
+import pandas as pd
+df =pd.read_excel('mark.xlsx')
+arrM=df[['Math']].to_numpy().flatten()
+print(arrM)
+#numpy
+arrN=df[['Name']].to_numpy().flatten()
+arrM=df[['Math']].to_numpy().flatten()
+arrP=df[['Phy']].to_numpy().flatten()
+print(arrN)
+print(arrM)
+print(arrP)
+m=arrM+5
+print(m)
+frame={"Name":arrN, "Math +":m}
+dfn=pd.DataFrame(frame)
+print(dfn)
+
+
+How to convert data read from the excel sheet to sql file
+import pandas as pd
+import sqlite3
+df= pd.read_excel('mark.xlsx')
+#database = "mark.sqlite"
+conn = sqlite3.connect("mark.sqlite")
+df.to_sql(name='Users',con=conn,if_exists='replace',index=False)
+conn.close()
+
+
+
+SQL queries
+To pull out set of column from the table
+SELECT Name FROM Users;
+SELECT Name,Math From Users;
+
+To pull out set of column from the table and sort in ascending
+SELECT Name,Math From Users order by Math ASC;
+
+To pull out set of column from the table and sort in descending
+SELECT Name,Math From Users order by Math DESC;
+
+To pull out set of column from the table where value greater than particular range
+SELECT * FROM Users WHERE Math> 90;
+SELECT * FROM Users WHERE Math> 90 and Phy>90;
+SELECT * FROM Users WHERE Math> 90 or Phy>90;
+SELECT * FROM Users WHERE Math IN (71, 91);
+
+
+To pull out set of column from the table  and perform the arithmetic operation on those column
+SELECT Math, Phy, (Math + Phy) FROM Users;
+SELECT Math, Phy, (Math - Phy) FROM Users;
+SELECT Math, Phy, Tamil,(Math - Phy + Tamil) FROM Users;
+SELECT * ,(Math - Phy) FROM Users;
+SELECT * ,(Math + Phy+Che+Eng+Bio+Tamil) FROM Users;
+SELECT Math, Phy, (Math + Phy),(Math - Phy) FROM Users;
+SELECT *, (Math + Phy),(Math - Phy) FROM Users;
+
+
+To pull out minimum value from specific column of the table
+SELECT min(Math)  FROM Users; 
+
+
+To pull out maximum value from specific column of the table
+SELECT max(Math)  FROM Users;   
+
+
+To pull out average value from specific column of the table
+SELECT avg(Math)  FROM Users;
+
+To pull out count value from specific column of the table
+SELECT count(Math)  FROM Users;
+
+
+To pull out sum value from specific column of the table
+SELECT sum(Math)  FROM Users;
+SELECT *, min(Math)  FROM Users;
+SELECT * FROM users GROUP BY Name;
+
+
+How to use sqldatabase query it and get data
+import pandas as pd
+import sqlite3 as db
+con = db.connect('mark.sqlite')
+df = pd.read_sql_query("SELECT sum(Math)  FROM Users", con)
+df1 = pd.read_sql_query("SELECT *, min(Math)  FROM Users", con)
+df2 = pd.read_sql_query("SELECT * FROM users GROUP BY Name;", con)
+df3 = pd.read_sql_query("SELECT count(Math)  FROM Users;", con)
+df4 = pd.read_sql_query("SELECT avg(Math)  FROM Users;", con)
+df5 = pd.read_sql_query("SELECT max(Math)  FROM Users;", con)
+df6 = pd.read_sql_query("SELECT min(Math)  FROM Users;", con)
+df7 = pd.read_sql_query("SELECT Math, Phy, (Math + Phy) FROM Users;", con)
+df8 = pd.read_sql_query("SELECT Math, Phy, (Math - Phy) FROM Users;", con)
+df9=pd.read_sql_query("SELECT Math, Phy, Tamil,(Math - Phy + Tamil) FROM Users;", con)
+df10=pd.read_sql_query("SELECT Math, Phy, (Math - Phy) FROM Users;", con)
+df11=pd.read_sql_query("SELECT Math, Phy, (Math + Phy) FROM Users;", con)
+df12=pd.read_sql_query("SELECT * FROM Users WHERE Math IN (71, 91);", con)
+df13=pd.read_sql_query("SELECT * FROM Users WHERE Math> 90 or Phy>90;", con)
+df14=pd.read_sql_query("SELECT * FROM Users WHERE Math> 90 and Phy>90;", con)
+df15=pd.read_sql_query("SELECT * FROM Users WHERE Math> 90;", con)
+df16=pd.read_sql_query("SELECT Name,Math From Users order by Math DESC;", con)
+df17=pd.read_sql_query("SELECT Name,Math From Users order by Math ASC;", con)
+df18=pd.read_sql_query("SELECT Name,Math From Users;", con)
+df19=pd.read_sql_query("SELECT Name FROM Users;", con)
+print(df)
+print(df1)
+print(df2)
+print(df3)
+print(df4)
+print(df5)
+print(df6)
+print(df7)
+print(df8)
+print(df9)
+print(df10)
+print(df11)
+print(df12)
+print(df13)
+print(df14)
+print(df15)
+print(df16)
+print(df17)
+print(df18)
+print(df19)
+con.commit()
+con.close()
+
+
+How to plot a diagram or graph from the given excel sheet data
+import pandas as pd
+from matplotlib import pyplot as plot
+# read by default 1st sheet of an excel file
+df = pd.read_excel('plot.xlsx')
+df.plot(kind = 'line', x= 'A', y= 'B', color = 'red')
+# set the title
+plot.title('Line')
+plot.savefig('line.pdf')
+# show the plot
+plot.show()
+
+
+How to plot a different style of graph using the code
+df.plot(kind = 'scatter', x = 'A', y = 'B',  color = 'red')
+df.plot(kind = 'line', x = 'A', y = 'B',  color = 'red')
+df.plot(kind = 'area', x = 'A', y = 'B',  color = 'red')
+df.plot(kind = 'bar', x= 'A', y= 'B', color = 'red')
+
+
+How to plot a graph using data from the code
+#scatter
+from matplotlib import pyplot as plot
+x = [10, 20, 30,40,50,60]
+y = [100, 200, 300,400,500,600]
+plot.scatter(x, y,color='red')
+plot.title('s graph')
+plot.ylabel('Y axis')
+plot.xlabel('X axis')
+plot.show()
+
+
+#line
+from matplotlib import pyplot as plot
+x = [10, 20, 30,40,50,60]
+y = [100, 200, 300,400,500,600]
+plot.plot(x, y,color='red')
+plot.title('L graph')
+plot.ylabel('Y axis')
+plot.xlabel('X axis')
+plot.show()
+
+from matplotlib import pyplot as plot
+x = [10, 20, 30,40,50,60]
+y = [100, 200, 300,400,500,600]
+plot.bar(x, y,color='red')
+plot.title('L graph')
+plot.ylabel('Y axis')
+plot.xlabel('X axis')
+plot.show()
+
+
+Create a list using String data and print the values
+A=["Java","Python","JavaScript"]
+print(A)
+
+Create a list using numerical data and print the values
+B=[10,20,30,40,45]
+print(B)
+
+Create a list using Boolean data and print the values
+list3=[True,False,True]
+print(list3)
+
+Create a list using all categories of data and print the values
+listall=[10,20,True,"Java",2000.00,'c']
+print(listall)
+
+Print the length of list
+stringlength=["Java","Python","Javascript"]
+x=len(stringlength)
+print(x)
+
+
+Print the particular value of the list using index specification
+stringlength=["Java","Python","Javascript"]
+a=stringlength[1]
+print(a)
+
+Print the particular value of the list starting from the end index it means using negative values
+fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+f1 = fruits [-1]
+print ("\n Reverse first fruit  = ",f1)
+
+How to insert value in list at particular index point
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+
+
+How to add insert at last index of list without specifying the index
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+
+How to remove the value from particular index of the list
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+
+How to remove the value from list using the value itself instead of index
+thislist = ["apple", "banana", "cherry","banana"]
+thislist.remove("banana")
+print(thislist)
+
+How to sort the value in list in ascending order
+thislist = [9,10,11,89,0,2,3,4]
+thislist.sort()
+print(thislist)
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+
+How to sort the value in list in descending order
+thislist = [9,10,11,89,0,2,3,4]
+thislist.sort(reverse = True)
+print(thislist)
+
+
+How to join one list and another list
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3)
+
+
+How to slice the value from the list using starting index and ending index of the particular section
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+a=thislist[2:5]
+print(a)
+
+How to slice the value from the list till particular index starting from 0
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+a=thislist[:4]
+print(a)
+
+
+How to slice the value from the 0 index till particular index 
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+x=thislist[2:]
+print(x)
+
+
+How to replace the particular value in the list via passing index with another value
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "kiwi"
+print(thislist)
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["kiwi", "watermelon"]
+print(thislist)
+
+
+How to perform simple if statement
+a = 3000
+b = 4000
+if b > a:
+  print("b is greater than a")
+
+
+How to perform if else
+a = 433
+b = 433
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+
+
+How to perform multiple if else
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("else ")
+
+
+How to perform multiple if else using logical statement
+a = 2
+b = 2
+c = 2
+if a > b and a > c:
+  print("a is greater")
+elif a == b and a == c:
+  print("all are equal")
+elif b > a and b >c:
+  print("b is greater")
+else:
+  print("else")
+
+
+
+How to get input from user and validate it
+
+# Define user ID and password
+user_id = "bala"
+password = "1234"
+
+# Get user input for user ID and password
+input_user_id = input("Enter user ID: ")
+input_password = input("Enter password: ")
+
+# Check if the user ID and password are correct
+if input_user_id == user_id and input_password == password:
+    # Give access to the module
+    print("Access granted. Welcome to the module!")
+else:
+    # Deny access
+    print("Access denied. Incorrect user ID or password.")
+
+
+
+How to read excel based on the user input
+
+import pandas as pd
+c= input("Enter  1 for file 1 ,2 for file 2...")
+if c=='1' :
+   df1=pd.read_excel("xlrandom1.xlsx")
+   print(df1)
+elif c=='2' :
+   df2=pd.read_excel("xlrandom2.xlsx")
+   print(df2)
+elif c=='3' :
+   df3=pd.read_excel("xlrandom3.xlsx")
+   print(df3)
+elif c=='4' :
+   df4=pd.read_excel("xlrandom4.xlsx")
+   print(df4)
+else:
+    print("File not found ")
+
+Basic line of GA implementation
+import pandas as pd
+c= input("Enter the 1 for file 1 ,2 for file 2...")
+if c=='1' or c=='file1' or c=='f1'or c=='one' or  c=='One' or c=='ONE' or c=='F1':
+   df1=pd.read_excel("xlrandom1.xlsx")
+   print(df1)
+
+
+Syntax of simple for statement
+#for
+for x in range(5):  #start at 0 end before 5 increment by 1
+    print(x)
+
+
+Syntax of simple for statement combining with input statement
+for x in range(5):  #start at 0 end before 5 increment by 1
+    print("hi")
+
+a=int(input("Enter salary"))
+print("salary=",a)
+
+
+Syntax of function in python
+def add():
+   x=2
+   y=4
+   c=x+y
+   print("add=",c)
+add()
+
+Syntax of function with return statement
+def add():
+   x=2
+   y=4
+   c=x+y
+   print("add=",c)
+   return c
+z=add()
+print(z)
+
+Syntax of calling the function with one of option chosen via if statement
+import pandas as pd
+def file1():
+    df1=pd.read_excel("xlrandom1.xlsx")
+    print(df1)
+    return df1
+if c=='1' or c=='file1' or c=='f1':
+   a=file1()
+
+
+How to convert given string to upper case
+a=" good morning"
+b=a.upper()
+print(b)
+
+
+How to convert given string to lower case
+ip=input("Enter =")
+a=ip.lower()
+print("Lower Format =",a)
+
+
+How to convert given string to pascal notation
+a=" HI HOW ARE YOU"
+b=a.title()
+print(b)
+
+How to remove common words between 2 list of string
+a = ['apple', 'banana', 'cherry']   # list of words to exclude (case insensitive)
+b = ['Apple', 'orange', 'Banana', 'grape', 'Cherry']
+filtered_words = [word for word in b if word.lower() not in a]
+print(filtered_words)
+
+
+How to join each and every string from the list into single sentence
+b = ['Hi', 'how', 'are', 'you', 'James']
+c = " ".join(b)
+print(c)
+
+Basic GA code to extract keyword from the string given
+a = ["a","are","the","what", "how", "why","is","in","your","this","explain","define","summarize","brief","detail","an","?","some"]
+ip= input("Enter your sentence: ")
+l=ip.lower()
+print("\ninput in lower case =",l)
+# Split the input string into individual words
+b = l.split()
+print("\ninput in list Format=",b)
+# Create a new list without the words to remove
+filter = [word for word in b if word.lower() not in a]
+print("\nfiltered words=",filter)
+# Join the filtered words back together
+result = " ".join(filter)
+print("\nKey word=", result)
+
+Sample input can be given as: 
+What is an Electric Field
+
+
+How to insert particular string content as a part of print statement:
+
+person="jose"
+print("my name is {}".format(person))
+
+Sample output is my name is jose
+
+person="jose"
+print("{} is my name ".format(person))
+
+person="jose"
+print("hi {} how are you ".format(person))
+
+person="jose"
+print(" {}  ".format(person))
+
+person="jose"
+print(f" hi my name is {person}  ")
+
+a="Raja"
+b="27"
+c="Tamil Nadu"
+print(f"My name is {a} I am {b} years old from {c}")
+
+a=input("Enter name");
+b=input("Enter age");
+c=input("Enter place");
+print(f"My name is {a} I am {b} years old from {c}")
+
+
+for x in range(5):
+  a=input("Enter name");
+  b=input("Enter age");
+  c=input("Enter place");
+  print(f"My name is {a} i am {b} years old from {c}")
+
+
+How to generate smiley
+print('\U0001F600')
+print('\U0001F601')
+
+
+a="Raja"
+b="27"
+c="Tamil Nadu"
+d="\U0001F607"
+print(f"My name is {a} I am {b} years old from {c} ..{d} ")
+
+Code for generating smileys
+a1 = "\U0001F600"  # Grinning face
+a2 = "\U0001F601"  # Beaming face
+a3 = "\U0001F602"  # Grinning face with big eyes
+a4 = "\U0001F603"  # Grinning face with smiling eyes
+a5 = "\U0001F604"  # Smiling face with heart eyes
+a6 = "\U0001F605"  # Smiling face with smiling eyes
+a7 = "\U0001F606"  # Grinning face
+a8 = "\U0001F607"  # Grinning face with big eyes
+a9 = "\U0001F608"  # Smiling face
+a10 = "\U0001F609"  # Smiling face with smiling eyes
+a11 = "\U0001F60A"  # Smiling face
+a12 = "\U0001F60B"  # Smiling face
+a13 = "\U0001F60C"  # Smiling face
+a14 = "\U0001F60D"  # Heart eyes
+a15 = "\U0001F60E"  # Smiling face
+a16 = "\U0001F60F"  # Smiling face
+a17 = "\U0001F610"  # Neutral face
+a18 = "\U0001F611"  # Expressionless face
+a19 = "\U0001F612"  # Unamused face
+a20 = "\U0001F613"  # Face with cold sweat
+a21 = "\U0001F614"  # Disappointed face
+a22 = "\U0001F615"  # Worried face
+a23 = "\U0001F616"  # Angry face
+a24 = "\U0001F617"  # Fearful face
+a25 = "\U0001F618"  # Weeping face
+a26 = "\U0001F619"  # Face with open mouth
+a27 = "\U0001F620"  # Grimacing face
+a28 = "\U0001F621"  # Confused face
+a29 = "\U0001F622"  # Disgusted face
+a30 = "\U0001F923"  # Rolling on the floor laughing
+a31 = "\U0001F924"  # Grinning face
+a32 = "\U0001F925"  # Grinning face
+a33 = "\U0001F926"  # Grinning face
+a34 = "\U0001F927"  # Smiling face
+a35 = "\U0001F928"  # Smiling face
+a36 = "\U0001F929"  # Winking face
+a37 = "\U0001F92A"  # Smiling face
+a38 = "\U0001F92B"  # Smiling face
+a39 = "\U0001F92C"  # Grinning face
+a40 = "\U0001F92D"  # Grinning face
+a41 = "\U0001F92E"  # Grinning face
+a42 = "\U0001F92F"  # Grinning face
+a43 = "\U0001F930"  # Smiling face
+a44 = "\U0001F931"  # Smiling face
+a45 = "\U0001F932"  # Smiling face
+a46 = "\U0001F933"  # Smiling face
+a47 = "\U0001F934"  # Smiling face
+a48 = "\U0001F935"  # Smiling face
+a49 = "\U0001F936"  # Smiling face
+a50 = "\U0001F937"  # Smiling face
+
+
+File concept:
+How to open the file and write the content
+# Open a file for writing
+with open('greeting.txt', 'w') as file:
+
+    file.write('Hi how are u .....')
+
+
+How to open the file and read the content
+# Open the file in read-only mode
+with open("greeting.txt", "r") as file:
+
+    # Read the contents of the file
+    file_contents = file.read()
+
+    # Print the contents of the file
+    print(file_contents)
+
+
+How to append content in file
+
+#append
+for i in range(3):
+    with open('d2.txt', 'a') as file:# a rep append
+        # Write "Hi how are you" to the file
+        x = input("text to write=")
+        file.write(x + '\n''\n')  # x Adding a newline for better separation of lines
+
+
+# Open the file in read-only mode
+with open("d2.txt", "r") as file:
+
+    # Read the contents of the file
+    file_contents = file.read()
+
+    # Print the contents of the file
+    print(file_contents)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

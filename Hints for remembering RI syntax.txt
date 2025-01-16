@@ -1,0 +1,145 @@
+Convert the single sentence in to string array:
+-----------------------------------------------------------
+
+import re
+
+txt = "Heavy rain in TN"
+x = re.split("\s", txt)
+print(x)
+
+text = " ".join(x)
+print(text)
+
+
+Check is the string starts and ends with particular string:
+-----------------------------------------------------------
+import re
+
+txt = "hi planet hello bala"
+
+# Check if the string starts with 'hello'
+x = re.findall("^hello", txt)
+print(x)
+if x:
+    print("Yes, the string starts with 'hello'")
+else:
+    print("No match")
+
+# Check if the string ends with 'bala'
+y = re.findall("bala$", txt)
+print(y)
+if y:
+    print("Yes, the string ends with 'bala'")
+else:
+    print("No match")
+
+Check is the string particular word:
+-----------------------------------
+import re#multi word
+
+txt = "The rain in Spain falls mainly in the plain!"
+
+#Check if the string contains either "falls" or "stays":
+
+x = re.findall("falls|stays", txt)
+
+print(x)
+
+if x:
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+
+
+import re#multi word
+
+txt = "The rain in Spain falls mainly in the plain!"
+
+#Check if the string contains either "falls" or "stays":
+
+x = re.findall("falls|Spain|sta", txt)
+
+print(x)
+
+if x:
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+
+
+
+Check data read from the file has particular word:
+--------------------------------------------------
+import re
+with open("python.txt", "r") as file :
+    file_contents = file.read()
+    x=  re.split("\s" , file_contents)
+
+
+a=x
+print(a)
+
+
+Remove the numbers from the data:
+---------------------------------
+import re # remove numbers
+text = input("Input =")
+a=re.sub(r'\d+', '', text)
+print(a)
+
+
+Convert all data to lower:
+-------------------------
+#Lower
+b=input("Enter a text")
+x1=b.lower()
+print(x1)
+
+
+Convert all data to upper:
+--------------------------
+#upper
+b1=input("Enter a text")
+x2=b1.upper()
+print(x2)
+
+
+Convert all data to title format:
+---------------------------------
+
+#title
+b2=input("Enter a text")
+x3=b2.title()
+print(x3)
+
+Remove all punctuation from data:
+---------------------------------
+#puntuation
+import re
+x11=input("Enter a text=")
+# Use regular expression to remove punctuation
+a1 = re.sub(r'[^\w\s]', '', x11)
+
+print(a1)
+
+
+How to remove special characters:
+---------------------------------
+#Special cha
+import re
+text = input("Input =")
+a12=re.sub(r'[^A-Za-z0-9\s]+', '', text)
+print(a12)
+
+
+How to remove spaces from the string:
+-------------------------------------
+import re
+text = input("Input =")
+a12=re.sub(r'\s+', ' ', text).strip()
+print(a12)
+
+
+
+
+

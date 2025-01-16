@@ -1,0 +1,13 @@
+pip install tensorflow
+pip install pysqlite3
+pip install keras==<version>
+pip install chatterbot
+
+import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+
+pip install googletrans==4.0.0-rc1

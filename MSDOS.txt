@@ -1,0 +1,34 @@
+D:\code>md test
+
+D:\code>cd test
+
+D:\code\test>notepad one.py
+
+D:\code\test>dir
+ Volume in drive D has no label.
+ Volume Serial Number is 2C9C-0038
+
+ Directory of D:\code\test
+
+09-12-2024  08:29    <DIR>          .
+09-12-2024  08:29    <DIR>          ..
+09-12-2024  08:29                11 one.py
+               1 File(s)             11 bytes
+               2 Dir(s)  73,857,515,520 bytes free
+
+D:\code\test>python one.py
+Hi
+
+D:\code\test>
+
+
+E:\Batch 2024\AI\DOS\testdata>start onefile.py
+
+E:\Batch 2024\AI\DOS\testdata>python onefile.py
+Good morning
+
+E:\Batch 2024\AI\DOS\testdata>cd..
+
+E:\Batch 2024\AI\DOS>cd..
+
+E:\Batch 2024\AI>cd dos

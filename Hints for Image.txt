@@ -1,0 +1,60 @@
+from PIL import Image
+im = Image.open("cat.jpg")
+#Show actual Image
+display(im)
+
+
+#image to array
+from PIL import Image
+import numpy as np
+im = Image.open("cat.jpg")
+#Show actual Image
+display(im)
+img_arr = np.array(im)
+print(img_arr)
+c=img_arr.size
+print(c)
+d=type(img_arr)
+print(d)
+print(img_arr.shape)
+img = Image.fromarray(img_arr)
+display(img)
+img.save("RGB_image.jpg")
+
+#Show rotated Image
+from PIL import Image
+im = Image.open("cat.jpg")
+#Show actual Image
+display(im)
+#Show rotated Image
+im = im.rotate(120)
+display(im)
+im.save("cat0.jpg")
+
+
+#Cropping a image
+
+#Import required Image library
+from PIL import Image
+#Create an Image Object from an Image
+im = Image.open('cat.jpg')
+#Display actual image
+im.show()
+#left, upper, right, lowe
+#Crop
+cropped = im.crop((2,3,150,150))
+#Display the cropped portion
+cropped.show()
+#Save the cropped image
+cropped.save('star6.jpg')
+
+
+from PIL import Image
+im = Image.open('smcat.jpg')
+display(im)
+img_arr = np.array(im)
+i2 =img_arr*img_arr
+img = Image.fromarray(i2)
+display(img)
+img.save("new.jpg")
+
