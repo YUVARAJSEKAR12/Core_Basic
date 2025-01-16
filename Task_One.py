@@ -1,32 +1,23 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov 20 08:58:59 2024
-
-@author: HP
-"""
-
 import pandas as pd
-c= input("Enter  1 for file 1 ,2 for file 2...")
-if c=='1' :
-   df1=pd.read_excel("Income_Tax_Details.xlsx")
-   print(df1)
-elif c=='2' :
-   df2=pd.read_excel("Stock_Register.xlsx")
-   print(df2)
-elif c=='3' :
-   df3=pd.read_excel("Salary_Details.xlsx")
-   print(df3)
-elif c=='4' :
-   df4=pd.read_excel("Employee_Attendance.xlsx")
-   print(df4)
-elif c=='5' :
-      df4=pd.read_excel("Consumables_Register.xlsx")
-      print(df4)
-elif c=='6' :
-         df4=pd.read_excel("Feedback_and_Customer_Details.xlsx")
-         print(df4)
-elif c=='7' :
-         df4=pd.read_excel("Sales_and_Profit.xlsx")
-         print(df4)  
-else:
-    print("File not found ")
+
+def get_customers_in_time_range(start_time, end_time):
+    # Read data from Excel file
+    df = pd.read_excel('TestData/Monday_Power_Consumption_Data.xlsx')
+
+    # Filter data based on time range
+    filtered_df = df[(df['Time'] >= start_time) & (df['Time'] <= end_time)]
+
+    # Calculate total number of customers
+    total_customers = filtered_df['Power Consumption (Watts)'].sum()
+
+    return total_customers
+
+
+# Example usage
+#excel_file =str(input('Enter the excel_file name '))
+start_time = input("Enter start time (HH:MM): ")
+end_time = input("Enter end time (HH:MM): ")
+
+total_customers = get_customers_in_time_range(start_time, end_time)
+
+print(f"Total customers between {start_time} and {end_time}: {total_customers}")
