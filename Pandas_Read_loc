@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov  1 08:07:00 2024
+
+@author: HP
+"""
+
+
+import pandas as pd
+
+df = pd.read_excel("mark.xlsx")
+#df = pd.read_csv("mark.csv")
+print(df)
+
+location1 =df.loc[[5,0, 1]]
+print(location1)
